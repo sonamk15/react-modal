@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from "react";
+
 import './index.css';
+
 import image from '../IMG/modal.jpg'
 
+
 const Modal = () => {
+  
+  const [loading, setLoading] = useState(true);
+
+
   return (
     <div className="modal-wrapper"
     // style={{
@@ -26,7 +33,7 @@ const Modal = () => {
             <div className='factory'>
               {/* <label for="factory">Factory</label><br/> */}
               <p>Factory</p><br/>
-              <select name="factory" id="factory">
+              <select name="factory" id="factory" onChange={(e) => setLoading(false)} >
                 <option value="">Select factory</option>
                 <option value="x">X</option>
                 <option value="y">Y</option>
@@ -41,7 +48,7 @@ const Modal = () => {
       <div className="modal-footer">
         <button className="btn-back">BACK</button>
 
-          <button className="btn-next">NEXT</button>
+          <button className="btn-next" disabled={loading}>NEXT</button>
         </div>
    
     </div>
