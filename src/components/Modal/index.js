@@ -10,7 +10,7 @@ const Modal = () => {
     //   opacity: show ? '1' : '0'
     // }}
     >
-      
+
       <div className="modal-header">
         <p>Material details</p>
         <span className="close-modal-btn">x</span>

@@ -21,7 +21,7 @@
 
   }
   
-  .modal-header {
+ .modal-header {
     background: #fff;
     color: black;
     padding: 1rem;
@@ -31,16 +31,18 @@
     justify-content: space-between;
   }
 
-  .modal-content {
+   /* .modal-content {
     padding: 1.5rem 1rem;
-  }
+  }  */
+
 
   .modal-body {
     margin-bottom: 1rem;
-    /* width: 100% !important; */
     display: flex;
     border: 1px solid #dddcdc;
   }
+
+
 
  .right-body h4 {
      margin-top:0px;
@@ -81,6 +83,7 @@
     line-height: 0px;
 }
 
+/*
 .modal-header{
     background: #fff;
     color: black;
@@ -88,12 +91,24 @@
     display: flex;
 
 }
+*/
 
 .modal-footer button {
-    display: flex;
-    flex-direction: row;
-    padding: 5px 10px;
-    float:right;
+    /* float: right; */
+    display:inline-block;
+    margin-right:0px;
 
-  
-  }
+    /* display: flex; */
+    flex-direction: row;
+    padding: 2px 5px;
+    /* float:right; */
+} 
+
+.btn-next {
+    float:right;
+}
+
+button.btn-back {
+    margin-right:-80%
+
+}
