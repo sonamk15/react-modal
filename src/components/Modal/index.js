@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import './index.css';
 
 import image from '../IMG/modal.jpg'
+import image1 from '../IMG/modal1.png'
+
 
 
 const Modal = () => {
@@ -11,45 +13,40 @@ const Modal = () => {
 
 
   return (
-    <div className="modal-wrapper"
+    <div className="modals-wrapper"
     // style={{
     //   transform: show ? 'translateY(0vh)' : 'translateY(-100vh)',
     //   opacity: show ? '1' : '0'
     // }}
     >
 
-      <div className="modal-header">
-        <p>Material details</p>
-        <span className="close-modal-btn">x</span>
-      </div>
+    
 
-      <div className="modal-content">
-        <div className="modal-body">
-          <div className='left-body'>
-            <img src={image} width="100" height="100"></img>
+      <div className="modals-content">
+        <div className="modals-left">
+          <div className='modal-design'>
+            <img src={image} width="150" height="200"></img>
           </div>
-          <div className='right-body'>
-            <h4> Assign to factory</h4>
-            <div className='factory'>
-              {/* <label for="factory">Factory</label><br/> */}
-              <p>Factory</p><br/>
-              <select name="factory" id="factory" onChange={(e) => setLoading(false)} >
-                <option value="">Select factory</option>
-                <option value="x">X</option>
-                <option value="y">Y</option>
-                <option value="z">Z</option>
-              </select>
-            </div>
+          <div className='modal-info'>
+            <p>ID: CT-15</p>
+            <h4>100% cotton /xyz color</h4>
+          </div>
+
+        </div> 
+
+        <div className="modals-right">
+          <div className='modal-design'>
+            <img src={image1} width="150" height="200"></img>
+          </div>
+          <div className='modal-info'>
+            <p>ID: CT-15</p>
+            <h4>100% cotton /xyz color</h4>
           </div>
 
         </div> 
        
       </div>
-      <div className="modal-footer">
-        <button className="btn-back">BACK</button>
-
-          <button className="btn-next" disabled={loading}>NEXT</button>
-        </div>
+  
    
     </div>
   )
