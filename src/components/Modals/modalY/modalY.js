@@ -1,30 +1,20 @@
 import React, { useState } from "react";
-
 import './modalY.css';
 import '../modalX/modalX.css';
-
-
 import image from '../../IMG/modal.jpg'
-
-
-const ModalY = (props) => {
   
-  const [loading, setLoading] = useState(true);
-
-
+const ModalY = (props) => {
+    const [loading, setLoading] = useState(true);
+  function increament(){
+    props.onCountChange()
+  }
   return (
-    <div className="modalY-wrapper"
- 
-    >
-
+    <div className="modalY-wrapper">
       <div className="modalY-header">
         <p>Material details</p>
         <span className="close-modalY-btn">x</span>
       </div>
-      <br/>
-      
-
-
+      <br/>     
       <div className="modalY-content">
         <div className="modalY-body">
           <div className='left-body'>
@@ -41,7 +31,6 @@ const ModalY = (props) => {
                 <option value="z">Z</option>
               </select>
             </div>
-
             <div className='design'>
               <label for="design">Assign for design</label><br/>
               <select name="factory" id="design" placeholder='design' onChange={() => setLoading(false)} >
@@ -50,29 +39,18 @@ const ModalY = (props) => {
                 <option value="y">Design name 2</option>
                 <option value="z">Design name 3</option>
                 <option value="z">Design name 4</option>
-
               </select>
             </div>
-
-
-
-
           </div>
-
-        </div> 
-       
+        </div>     
       </div>
       <br/>
-
       <br/>
       <br/>
-
       <div className="modalY-footer">
         <button className="btn-back">BACK</button>
-
-          <button className="btn-next" disabled={loading}>NEXT</button>
-        </div>
-   
+        <button className="btn-next" disabled={loading} onClick={increament}>NEXT</button>
+        </div>  
     </div>
   )
 };

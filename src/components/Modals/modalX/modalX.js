@@ -1,26 +1,20 @@
 import React, { useState } from "react";
-
 import './modalX.css';
-
 import image from '../../IMG/modal.jpg'
 
 
 const ModalX = (props) => {
-  
   const [loading, setLoading] = useState(true);
-
-
+  function increament(){
+      props.onCountChange()
+  }
   return (
-    <div className="modalY-wrapper"
- 
-    >
-
+    <div className="modalY-wrapper">
       <div className="modalY-header">
         <p>Material details</p>
         <span className="close-modalY-btn">x</span>
       </div>
       <br/>
-
       <div className="modalY-content">
         <div className="modalY-body">
           <div className='left-body'>
@@ -42,16 +36,12 @@ const ModalX = (props) => {
        
       </div>
       <br/>
-
       <br/>
       <br/>
-
       <div className="modalY-footer">
         <button className="btn-back">BACK</button>
-
-          <button className="btn-next" disabled={loading}>NEXT</button>
-        </div>
-   
+        <button className="btn-next" disabled={loading} onClick={increament}>NEXT</button>
+        </div>         
     </div>
   )
 };
