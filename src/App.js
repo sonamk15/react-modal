@@ -5,6 +5,7 @@ import ModalY from './components/Modals/modalY/modalY';
 import ModalZ from './components/Modals/modalZ/modalZ';
 // import ModalSlider from './components/ModalSlider'
 
+
 let count = 1
 
 function dispalyModal() {
